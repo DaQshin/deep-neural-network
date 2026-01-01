@@ -134,7 +134,6 @@ def update_parameters(parameters, grads, learning_rate=0.001):
 def L_layer_model(X, Y, layer_dims, learning_rate=0.01, num_iterations=1000, print_cost=False):
     parameters = initialize_parameters_deep(layer_dims)
     costs = []
-    epsilon = 1e-15
     for i in range(num_iterations):
         AL, caches = L_model_forward(X, parameters)
         cost = compute_cost(AL, Y)
